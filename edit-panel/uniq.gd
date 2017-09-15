@@ -35,6 +35,9 @@ func get_data():
 
 func initialize(event):
   if event != null:
+    if event.has('date'):
+      date_node.set_value(event.date)
+
     # Only one action for a uniq event
     var action = event.actions[0]
 
@@ -43,9 +46,6 @@ func initialize(event):
 
     if action.has('cost'):
       cost_node.set_value(action.cost)
-
-    if action.has('date'):
-      date_node.set_value(action.date)
 
     if action.has('unlock_game_type'):
       unlock_game_type.set_value(action.unlock_game_type)
