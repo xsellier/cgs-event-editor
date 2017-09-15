@@ -75,13 +75,13 @@ func update_list(unused=null):
 
     if event.type == 'random':
       node = random_event_list
-      text = '%s - %s - %s' % [event.name, event.actions.size(), event.type]
+      text = '%s - %s - %s - %s' % [event.probability, event.name, event.actions.size(), event.type]
 
     elif event.type == 'scheduled':
-      text = '%s - %s - %s' % [event.name, event.actions.size(), event.type]
+      text = '%s - %s - %s - %s' % [event.start_date, event.name, event.actions.size(), event.type]
 
     else:
-      text = '%s - %s - %s' % [event.name, 1, event.type]
+      text = '%s - %s - %s - %s' % [event.date, event.name, 1, event.type]
 
     var index = node.get_item_count()
 

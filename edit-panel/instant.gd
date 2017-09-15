@@ -5,6 +5,7 @@ onready var name_node = get_node('container/Button')
 onready var cost_node = get_node('container/Cost')
 onready var fan_node = get_node('container/Fans %')
 onready var sell_node = get_node('container/Sells %')
+onready var game_node = get_node('container/Game')
 
 func _ready():
   close_button.connect('pressed', self, 'queue_free')
@@ -24,6 +25,9 @@ func get_data():
   if sell_node.get_value() != null:
     data['sell'] = sell_node.get_value()
 
+  if game_node.get_value() != null:
+    data['game'] = game_node.get_value()
+
   return data
 
 func try_to_set(data, node, item):
@@ -40,3 +44,4 @@ func set_data(data):
   try_to_set(data, cost_node, 'cost')
   try_to_set(data, fan_node, 'fan')
   try_to_set(data, sell_node, 'sell')
+  try_to_set(data, game_node, 'game')
