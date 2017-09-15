@@ -29,8 +29,14 @@ func _ready():
 
   title_node.set_text(get_name())
 
+  event_model.connect('deleted_event', self, 'deleted_event')
+
   toggle_uniq(false)
   update_save_button()
+
+func deleted_event(id):
+  if event_id == id:
+    reset()
 
 func toggle_uniq(uniq):
   var sub_scene = null
@@ -50,6 +56,7 @@ func update_save_button():
 
 func reset():
   get_tree().reload_current_scene()
+  event_id = null
 
   update_save_button()
 
