@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://edit-panel/name-button.gd" type="Script" id=1]
+
+[node name="durable" type="Label"]
+
+rect/min_size = Vector2( 0, 20 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 300.0
+margin/bottom = 20.0
+text = "Durable"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 281.0
+margin/top = 0.0
+margin/right = 300.0
+margin/bottom = 20.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "x"
+flat = false
+
+
