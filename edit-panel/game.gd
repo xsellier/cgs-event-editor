@@ -1,6 +1,7 @@
 extends Control
 
 const GAME_THEME = 'Adaptation de film'
+const HYPE = 10
 
 var status = false
 
@@ -19,7 +20,8 @@ func get_value():
   if checkbox_node.is_pressed():
     value = {
       'theme': GAME_THEME,
-      'name': name_node.get_text()
+      'name': name_node.get_text(),
+      'hype': HYPE,
     }
 
   return value
