@@ -19,6 +19,8 @@ func _ready():
   import_dialog.connect('file_selected', self, 'import_file')
   export_dialog.connect('file_selected', self, 'export_file')
 
+  import_dialog.set_access(FileDialog.ACCESS_FILESYSTEM)
+  export_dialog.set_access(FileDialog.ACCESS_FILESYSTEM)
 
 func import_pressed():
   import_dialog.show()
