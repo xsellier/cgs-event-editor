@@ -4,6 +4,7 @@ onready var fans_node = get_node('Fans %')
 onready var cost_node = get_node('Costs')
 onready var date_node = get_node('Date')
 onready var unlock_game_type = get_node('Unlock game type')
+onready var unlock_targetted_audience = get_node('Unlock targetted audience')
 
 func get_data():
   var data = {
@@ -25,6 +26,9 @@ func get_data():
   if unlock_game_type.get_value() != null:
     action['unlock_game_type'] = unlock_game_type.get_value()
 
+  if unlock_targetted_audience.get_value() != null:
+    action['unlock_targetted_audience'] = unlock_targetted_audience.get_value()
+
   data.actions.append(action)
 
   return data
@@ -45,3 +49,6 @@ func initialize(event):
 
     if action.has('unlock_game_type'):
       unlock_game_type.set_value(action.unlock_game_type)
+
+    if action.has('unlock_targetted_audience'):
+      unlock_targetted_audience.set_value(action.unlock_targetted_audience)
