@@ -5,7 +5,7 @@ onready var selected_index = null
 onready var last_selected_node = null
 
 onready var edition_buttons = get_node('margin/container/separator/middle/edition')
-onready var create_panel_node = get_node('margin/container/separator/right/scrollCenter/center/CreatePanel')
+onready var create_panel_node = get_node('margin/container/separator/right/scrollCenter/CreatePanel')
 
 onready var model = get_node('/root/model')
 onready var event_model = model.get_model('event')
