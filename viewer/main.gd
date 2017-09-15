@@ -90,3 +90,6 @@ func update_list(unused=null):
 
   event_id = null
   edition_buttons.set_event_id(event_id)
+
+  random_event_list.sort_items_by_text()
+  scheduled_event_list.sort_items_by_text()
