@@ -14,7 +14,7 @@ func get_data():
   }
 
   var action = {
-    'button': 'ok',
+    'button': 'BUTTON_OK',
   }
 
   if cost_node.get_value() != null:

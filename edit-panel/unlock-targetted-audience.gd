@@ -1,6 +1,17 @@
 extends Control
 
-const TARGETTED_AUDIENCE = ['young', 'all', 'mature']
+const TARGETTED_AUDIENCE = [{
+  'name': 'young',
+  'label': 'LABEL_TARGETTED_AUDIENCE_YOUNG'
+},
+{
+  'name': 'all',
+  'label': 'LABEL_TARGETTED_AUDIENCE_ALL'
+},
+{
+  'name': 'mature',
+  'label': 'LABEL_TARGETTED_AUDIENCE_MATURE'
+}]
 
 var status = false
 
